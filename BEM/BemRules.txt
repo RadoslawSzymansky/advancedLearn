@@ -1,0 +1,3 @@
+METODOLOGIA BEM
+block element modifier 
+- bem mowi ze strona sklada sie z komponentow
