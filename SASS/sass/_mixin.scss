@@ -1,0 +1,33 @@
+@mixin text {
+  font-family: serif;
+  font-size: 20px;
+}
+div {
+  @include text;
+}
+
+@mixin text {
+  font-family: serif;
+  font-size: 20px;
+}
+div {
+  @include text;
+}
+
+// rozszerzone
+
+@mixin text ($size, $font) {
+  font-family: $font;
+  font-size: $size;
+}
+div {
+  @include text(20px, serif);
+}
+
+@mixin list {
+  ul {
+    li {
+      font-size: 20px
+    }
+  } 
+}

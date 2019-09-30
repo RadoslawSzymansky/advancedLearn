@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+  font-size: 20px;
+}
+
+header h1 {
+  background-color: #fff;
+}
+
+header h2 {
+  font-size: 40px;
+  background-color: red;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,18 @@
-METODOLOGIA BEM
+METODOLOGIA BEM (konwecja nazywania wezlow (obiejktow znacnzikow ) oraz towrzenia seleketorow w css)
+konwecja to zestaw regul
 block element modifier 
 - bem mowi ze strona sklada sie z komponentow
+
+CECHY BEM:
+Modulowosc  w zakresie html (zbudowane z klockow)
+Architektura CSS oparta o klasy z minimlazna rola zagniezdzen oraz marginlalnym wykorzenime regul kaskadowosoci
+Opartyy jest o 3 typy obiektów
+ - blok
+ - element
+ - modyfikator ktory nie moze wystepowac sam
+
+ PO co 
+  - wspolne reguly pomagaja pracowac w grupie i dluzszym okresie czasy
+  - brak chaosu w kodze
+  - reuzywalnosc
+   

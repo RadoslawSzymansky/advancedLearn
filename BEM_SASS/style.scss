@@ -1,0 +1,15 @@
+.menu {
+  border: 2px solid black;
+  &__list {
+    display: flex;
+    &__--horizontal {
+      flex-direction: column;
+    }
+  }
+
+  // odwrocenie
+  .menu--theme-old & {
+    // da nam .menu--theme-old .menu
+    background-color: darkcyan  ;
+  }
+}

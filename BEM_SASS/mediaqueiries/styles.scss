@@ -1,0 +1,49 @@
+// 1 sposob
+.menu__item {
+  padding: 20px;
+  font-size: 1.6rem;
+  &--active {
+    background-color: #fff;
+    @media (min-width: 640px) {
+      background-color: #ddd;
+    }
+  }
+  @media (min-width: 640px) {
+    font-size: 1.6rem;
+  }
+}
+
+
+// ---- 2 sposob -- zaawansowany
+
+// tworzymy mape do ktorej rzpyporzadkujemuy wartosci
+// np tak
+
+// tworzymy mape - obiekt te min widthh to stringi
+$breakpoints: (
+  xsmall: (min-width: 460px),
+  small: (min-width: 640px),
+  medium: (min-wdith: 800px),
+  large: (min-wdith: 1024px),
+  xlarge: (min-wdith: 1200px),
+  xxlarge: (min-wdith: 1440px)
+);
+
+@mixin mq($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+  @if($size) {
+    @media #{$size} {
+      @content
+    }
+  }
+  @else {
+    @error '"#{$breakpoint}" - Nie pozponaje tej wielkosci'
+  }
+}
+
+div {
+  font-size: 10px;
+  @include mq(xsmall) {
+    font-size: 18px;
+  }
+}
