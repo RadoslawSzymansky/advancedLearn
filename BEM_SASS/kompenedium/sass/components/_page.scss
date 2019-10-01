@@ -1,0 +1,27 @@
+.page {
+  @include flex(column);
+  background-color: $color-bgc;
+  min-height: 100vh;
+
+  &__menu {
+    padding: 10px;
+  }
+  
+  &__banner {
+    margin: 20px 0;
+  }
+
+  &__content {
+    margin-bottom: 10px;
+    flex: 1;
+  }
+
+  &__form {
+    margin-bottom: 20px;
+  }
+
+  &__footer {
+    margin-top: auto;
+    background-color: red;
+  }
+}

@@ -1,0 +1,27 @@
+.menu {
+  @include flex(row) {
+    justify-content: space-between;
+  };
+  background-color: rgb(8, 8, 8);
+  color: #fff;
+  &__links {
+    display: flex;
+    flex-direction: column;
+    @include mq(xsmall) {
+      flex-direction: row
+    }
+  }
+  &__item {
+    margin: 0 10px;;
+  }
+
+  &__logo {
+    @include flex(row-reverse);
+  }
+
+  // odwrocenie
+  .menu--theme-old & {
+    // da nam .menu--theme-old .menu
+    background-color: darkcyan  ;
+  }
+}

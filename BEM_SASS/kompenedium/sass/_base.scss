@@ -1,0 +1,19 @@
+ul {
+  list-style: none;
+  li a {
+    text-decoration: none;
+  }
+}
+
+.link {
+  color: $color-link;
+  &--active {
+    color: $color-link-active;
+    &:hover {
+      background-color: rgb(73, 72, 72);
+    }
+  }
+  &:hover {
+    color: yellow
+  }
+}

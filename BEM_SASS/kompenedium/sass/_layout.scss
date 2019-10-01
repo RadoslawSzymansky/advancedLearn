@@ -1,0 +1,9 @@
+/* GRID */
+
+@for $i from 1 through 12 {
+    $width: percentage(1 / $i);
+
+    .col-#{$i} {
+        width: $width;
+    }
+}
