@@ -1,0 +1,23 @@
+.menu {
+  background-color: rgb(168, 168, 235);
+  display: grid;
+  grid-template-columns: minmax(100px, 200px) auto;
+  min-height: 40px;
+  &__logo {
+    background-color: red;
+    padding:  0 10px;
+    align-self: center;
+  }
+  &__links {
+    justify-self: end;
+    align-self: center;
+  }
+  &__link {
+    color: #fff;
+    margin: 0 10px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+  }
+}

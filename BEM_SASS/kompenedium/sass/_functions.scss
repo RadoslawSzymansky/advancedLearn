@@ -1,0 +1,19 @@
+@function half($count) {
+  @return $count / 2;
+}
+
+@function btnMargin($width: null, $height: 0) {
+  @if($width == null) {
+    @error "width is required"
+  }
+
+  @if ($width > 100px and $height > 200px) {
+    @return 15px;
+  }
+  @else if ($width > 50px and $height == 0) {
+    @return 30px;
+  }
+  @else {
+    @return 45px;
+  }
+}

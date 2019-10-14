@@ -1,0 +1,15 @@
+.btn {
+  color: darkcyan;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid darkcyan;
+  border-radius: 5px;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    color: white;
+    background-color: darkcyan;
+  }
+}

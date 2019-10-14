@@ -1,0 +1,27 @@
+1. npm init
+2. npm i -D webpack webpack-cli
+3. tworzymy plik konf webpack.config.js
+4.  
+
+
+// informacje
+
+  -- development plik nie bedzie zminifikowany bd mial komenatrze i zajemowal kilka razy wiecej
+  - uruchomienie webpacka 3 opcje: webpack, webpack w scrypptach
+  -- uruchomienie za pomoca npx: npx webpack i z " node-modukles/.bin/webppack " w skryprach
+  -- zmiana nazwy  pliku conf webpack --config nazwaPliku
+
+// webpack bootrsap/runtime
+
+/// bez konfiguracji - bo ma domyslne ustawienia:
+
+  z wiersza polecen: 
+    - wtorzymy script build: "webpack"
+    - domyslnie folder src jest dla plikow i plik index.jest jest plikiem wejsciowym
+    - stworzy folder dist z plikiem main.jest
+    - mozna 2 opcje webpack --mode production i development
+
+    * zmiana pliku domyslnego
+      -  webpack src/app.js --mode=none -o build/main.js -o to plik output (mozna dac --entry i --output)
+      - mozna zmieniac wyszystko, np folder sam to --output-path=bundleFolder
+  -- zmiana nazwy  pliku conf webpack --config nazwaPliku

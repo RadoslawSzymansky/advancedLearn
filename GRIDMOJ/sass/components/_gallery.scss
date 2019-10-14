@@ -1,0 +1,28 @@
+.gallery {
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  padding: 10px;
+  // grid-template-rows: repeat(auto-fill, minmax(30px, auto));
+  grid-gap: 16px;
+  &__title {
+    grid-column: -1/1;
+    background-color: #fff;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    min-width: 130px;
+    min-height: 130px;
+    background-color: #fff;
+  }
+  &__btn {
+    align-self: end;
+    margin: 0 10px;;
+   
+    grid-column: -1/1;
+     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,22 @@
+.sidebar {
+  display: flex;
+  background-color: #fff;
+  &__title {
+
+  }
+  &__links {
+    flex-grow: 1;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    .sidebar__link  {
+      margin: 0 10px ;
+      height: 100%;
+      color: #fff;
+      display: inline-block;
+      background-color: rgb(44, 44, 44);
+      padding: 3px 10px;
+      border-radius: 5px;
+    }
+  }
+}

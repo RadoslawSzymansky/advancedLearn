@@ -1,0 +1,13 @@
+.articles {
+  background-color: green;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+  padding: 10px;
+  grid-gap: 15px;
+  grid-template-rows: auto;
+  .article {
+    background-color: red;
+    align-self: start;
+    justify-self: center;
+  }
+}

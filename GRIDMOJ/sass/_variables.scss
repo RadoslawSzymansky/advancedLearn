@@ -1,0 +1,10 @@
+$color-primary: rgb(86, 153, 253);
+
+$breakpoints: (
+  xsmall: (min-width: 460px),
+  small: (min-width: 640px),
+  medium: (min-wdith: 800px),
+  large: (min-wdith: 1024px),
+  xlarge: (min-wdith: 1200px),
+  xxlarge: (min-wdith: 1440px)
+);

@@ -1,0 +1,11 @@
+.article {
+  margin-bottom: 25px;
+  background-color: rgb(233, 233, 233);
+  padding: 15px;
+  &__title {
+    font-size: 26px;
+  }
+  &__text {
+    margin: 10px 0;
+  }
+}

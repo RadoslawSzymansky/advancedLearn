@@ -1,0 +1,26 @@
+.form {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 3px $color-primary;
+  background-color: rgb(226, 226, 226);
+  &__text {
+    margin-bottom: 10px;
+    &--small {
+      font-size: 10px;
+    }
+    &:nth-last-child(1) {
+      margin-top: 10px;
+      margin-bottom: 0;
+      text-align: end;
+      font-style: italic;
+      padding-right: 10px;
+    }
+  }
+  &__input {
+    margin-bottom: 10px;
+    padding-left: 7px;
+  }
+}
