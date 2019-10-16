@@ -1,15 +1,21 @@
 1. npm init
 2. npm i -D webpack webpack-cli
 3. tworzymy plik konf webpack.config.js
-4.  
+4.  TRYB watch - zeby nasluchiwal npm run dev --watch lub scktyrpt z flaga webpack --watch
+5.  Ale jak z innego skryptu do innego skryptu to npm run dev -- --watch - taki skrypt
 
+
+// Hashinh 
+  -- przegladarka jak pobrala pliki to niekoniecznie chce je pobrac drugi raz.
+  -- czyli nie pobiera pliku jak jest ta sama nazwa a moze byc inna zawartosc.
+  -- dlatego sie hashuje , mozna dodac hash indetyfikator dla pliku obok nazwy 
 
 // informacje
 
   -- development plik nie bedzie zminifikowany bd mial komenatrze i zajemowal kilka razy wiecej
   - uruchomienie webpacka 3 opcje: webpack, webpack w scrypptach
   -- uruchomienie za pomoca npx: npx webpack i z " node-modukles/.bin/webppack " w skryprach
-  -- zmiana nazwy  pliku conf webpack --config nazwaPliku
+  -- zmiana nazwy  pliku conf webpack --config nazwaPliku, ale zaleca sie uzycie contenthash, wielkosc hasha [contenthash:4]
 
 // webpack bootrsap/runtime
 
@@ -25,3 +31,27 @@
       -  webpack src/app.js --mode=none -o build/main.js -o to plik output (mozna dac --entry i --output)
       - mozna zmieniac wyszystko, np folder sam to --output-path=bundleFolder
   -- zmiana nazwy  pliku conf webpack --config nazwaPliku
+
+
+//  Webpack Dev swerver - server developerksi oswieza strone i moduly np  wreacue
+// --- ma duzy opcji , instalacja jako zaleznosc dev
+// odpalant jako webpack-dev-server jak skrypt start najlepiej -- on odpala te pliki w pamieci! wiec nie wrzuci plikow do folderu jak nie trzeba
+
+automatyczne otwieranie przegladarki
+ flaga --open doi skryptu lub do pliku conf devServer: { open: true }
+
+
+
+ BABEL -transpiliuje kod do starszej wersji(ES5 np)
+
+ babel polyfill (usebuiltins) - ale teraz zaleca sie babel core zamiast pollygul .   jak sa nowe rozwiazanie *(nowe API) np promissy to on sobie z tym poradzi , asam babel nie. Polyfill to kod
+Babel ma pluginy, presett to zbiory pluginow np do react
+presenrty dodajemy w tablicy w .babelrc w : "presets": [] i " plugins tez 
+instalowac z @ @babel wszystkie
+
+
+
+copy-webpack-plugin do przerzucania plikow do do foldewrow roznych np w build
+
+
+WEBPACK BOILER PLATER

@@ -3,6 +3,8 @@
 // tworzymy modul Common.js ktory zwraca obiekt konfiguracyjny
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 module.exports = {
@@ -14,8 +16,15 @@ module.exports = {
   // },
   entry: './src/app.js',
   output: {
-    filename: 'index.js',
+    // hashowanie
+    filename: '[contenthash:3]index.js',
     path: path.resolve(__dirname, `build`)
+  },
+  devServer: {
+    open: true,
+    // contebnt base czyli zasoby statyczne ktorych nie bundlujemy
+    contentBase: path.resolve(__dirname, `public`),
+    // port: 5000
   },
   module: {
     rules: [
@@ -23,14 +32,33 @@ module.exports = {
         // raw loader dla plikow txt
         test: /\.txt$/,
         use: 'raw-loader'
+      },
+      {
+        // raw loader dla plikow txt
+        test: /\.css$/,
+        // sstyle-loader wstrzykuje zaimpo plik css w js do head index.html
+        // use: [ 'style-loader', 'css-loader', ]
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader'
+        ]
+        // mini-css-extract-plugine do jednego pliku saprowadzi wszystko css
       }
     ]
   },
   plugins: [
     // czysci folder build z niepotrzebnych plikow i stare rzeczy?
     new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin(),
+    new MiniCssExtractPlugin({
+      // dobra nazwa dla wersji dev
+      filename: '[name].css'
+    })
   ]
 }
+
+// CSS 
+  // -- 
 
 // mode oznacza czy production czy development
 // mozna uzywac innych modulow w webpacku np wbudowany modul node - path
@@ -69,3 +97,16 @@ module.exports = {
     // -- najpopularniejszy HtmlWebpackPlugin
     // -- instalacjo jako devDepenedency
     // przekazuje je  w tablicy
+
+
+// // Hashinh 
+// --przegladarka jak pobrala pliki to niekoniecznie chce je pobrac drugi raz.
+//   --czyli nie pobiera pliku jak jest ta sama nazwa a moze byc inna zawartosc.
+//   --dlatego sie hashuje, mozna dodac hash indetyfikator dla pliku obok nazwy 
+//   -- hash zmieni hash dla wszystkich plikow ten sam, a contenthash inne dla wszystkjch
+
+// Dynamicznie gemnerowany html  plugin html-webpack-plugin
+
+//  Webpack Dev swerver - server developerksi oswieza strone i moduly np  wreacue
+// --- ma duzy opcji , instalacja jako zaleznosc dev
+// odpalant jako webpack-dev-server lub npm start

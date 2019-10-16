@@ -3,6 +3,9 @@
 // tworzymy modul Common.js ktory zwraca obiekt konfiguracyjny
 
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = {
   mode: 'production',
@@ -15,7 +18,19 @@ module.exports = {
   output: {
     filename: 'prod.js',
     path: path.resolve(__dirname, `../build`)
-  }
+  },
+  plugins: [
+    // czysci folder build z niepotrzebnych plikow i stare rzeczy?
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'nowaNazwa'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'drugaNazwa',
+      filename: 'prod.html',
+      template: "src/template.html"
+    })
+  ]
 }
 
 // mode oznacza czy production czy development

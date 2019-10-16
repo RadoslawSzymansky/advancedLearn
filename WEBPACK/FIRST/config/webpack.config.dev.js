@@ -4,6 +4,9 @@
 
 const path = require('path');
 
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   mode: 'development',
   // wiecej plikow wejsciowych
@@ -15,7 +18,25 @@ module.exports = {
   output: {
     filename: 'dev.js',
     path: path.resolve(__dirname, `../build`)
-  }
+  },
+  module: {
+    rules: [
+      {
+        // raw loader dla plikow txt
+        test: /\.txt$/,
+        use: 'raw-loader'
+      }
+    ]
+  },
+  plugins: [
+    // czysci folder build z niepotrzebnych plikow i stare rzeczy?
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'drugaNazwa',
+      filename: 'prod.html',
+      template: "src/template.html"
+    })
+  ]
 }
 
 // mode oznacza czy production czy development

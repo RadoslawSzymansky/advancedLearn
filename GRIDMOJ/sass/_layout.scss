@@ -44,16 +44,19 @@
   // grid
   display: grid;
   grid-template-rows: auto 1fr auto auto;
+
   grid-template-columns: minmax(auto, 100px) 1fr 1fr 1fr;
   grid-template-areas: 
-  'menu menu menu menu'
-  'asides article article article'
-  'gallery gallery gallery gallery'
-  'footer footer footer footer';
+    'menu menu menu menu'
+    'asides article article article'
+    'gallery gallery gallery gallery'
+    'footer footer footer footer';
+  
 
   @include mq(medium) {
+    background-color: yellow;
     grid-template-areas: 
-     'menu menu menu menu'
+    'menu menu menu menu'
     'asides gallery gallery gallery'
     'asides article article article'
     'footer footer footer footer';
@@ -67,7 +70,6 @@
 
   }
    &__gallery {
-    background-color: rgb(72, 131, 65);
     // grid-column: 2/4;
     grid-area: gallery;
 

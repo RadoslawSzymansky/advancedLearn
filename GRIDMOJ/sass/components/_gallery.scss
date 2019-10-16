@@ -1,5 +1,4 @@
 .gallery {
-  background-color: red;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   padding: 10px;
@@ -7,7 +6,8 @@
   grid-gap: 16px;
   &__title {
     grid-column: -1/1;
-    background-color: #fff;
+    color: rgb(39, 37, 37);
+    text-align: center;
   }
   &__img {
     display: block;
@@ -16,13 +16,15 @@
     min-height: 130px;
     background-color: #fff;
   }
-  &__btn {
+  &__buttons {
     align-self: end;
     margin: 0 10px;;
    
     grid-column: -1/1;
-     display: flex;
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+  }
+  &__btn {
+    margin: 0 10px 5px;
   }
 }
